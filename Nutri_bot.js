@@ -1,5 +1,4 @@
 //Letting "messages" be the message input to the bot
-//API KEY => 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
 const fetch =  require("node-fetch") ; 
 const dotenv = require("dotenv");
 dotenv.config();
