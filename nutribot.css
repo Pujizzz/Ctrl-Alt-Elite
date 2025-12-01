@@ -1,0 +1,145 @@
+/* Body - center everything */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: var(--bg);
+}
+
+/* Chatbot card styling */
+.Chatbot {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0,0 , 0.15);
+}
+
+/* Input row - horizontal alignment */
+.input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Textarea styling */
+#InsideBox {
+    width: 350px;
+    height: 25px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.325);
+}
+
+/* Button styling */
+#button {
+    background-color:rgba(111, 207, 151, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    height:30px;
+    width:55px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button:hover {
+    background-color: #5abf85;
+    transform: scale(1.05);
+}
+
+/* Output box styling */
+#output {
+    margin-top: 20px;
+    min-height: 50px;
+    text-align: left;
+}
+
+.theme {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.theme button {
+    border:none;
+    border-radius: 20px;
+    cursor:pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+#theme1 {
+    background-color:#d9f5e9 ;
+}
+#theme1:hover {
+    transform: scale(1.09);
+}
+#theme2 {
+    background-color: #ffe9d6;
+}
+#theme2:hover {
+    transform: scale(1.09);
+}
+#theme3 {
+    background-color: rgb(255, 182, 193);
+}
+#theme3:hover {
+    transform: scale(1.09) ;
+}
+#theme4 {
+    background-color: lightskyblue;
+}
+#theme4:hover {
+    transform: scale(1.09);
+}
+/* THEME COLORS */
+.theme-green {
+    --bg:linear-gradient(135deg, #ddf4e3, #49d280);
+    --accent: #a7d8c9;
+}
+
+.theme-orange {
+    --bg:linear-gradient(135deg, #f4f0eb, #f48c4c);
+    --accent: #fbbf93;
+}
+.theme-pink {
+    --bg: linear-gradient(135deg, #efd6e5, #ce4a88);
+    --accent: rgb(203, 143, 152);
+}
+.theme-blue {
+    --bg: linear-gradient(135deg, #bbdff5, #5288f3);
+    --accent: rgb(143, 189, 218);
+}
+
+#button {
+    background-color: var(--accent);
+}
+@keyframes spin {
+    0% {transform: rotate(0deg);} 
+    100% {transform:rotate(360deg)}
+}
+.spin {
+    animation: spin 1s linear;
+}
+
+img {
+    width:100px;
+    border-radius: 10px;
+    float: right;
+    margin:10px;
+}
