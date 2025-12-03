@@ -62,4 +62,4 @@ app.listen(3000, function(){
     console.log("NutriBot backend running on port 3000")
 });
 
-//All the above is for now, before connecting to the front-end :D
+//All the above is for now, preparing to connect front and backend :D
