@@ -15,6 +15,8 @@ app.use(express.json());
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const API_KEY = process.env.GROQ_API_KEY //key in .env form
 
+
+//To send the userMessage to Groq's AI (format: JSON)
 function nutriBotAnswer(userMessage){
     return new Promise (function(resolve, reject){
         const body = { 
@@ -32,15 +34,15 @@ function nutriBotAnswer(userMessage){
         headers: { "Content-Type": "application/json", "Authorization": "Bearer" + API_KEY}, 
         body:JSON.stringify(body)
     })
-    .then(res => res.json())
+    .then(res => res.json())//Parses response as JSON
     .then(data => {
         if (!data.choices || data.choices.length === 0){
-            return reject(new Error("API did not return any choices, Please check your key and model."));
+            return reject(new Error("API did not return any choices, Please check your key and model.")); //Check if the AI gives valid ans, if not throws error 
    
         }
         resolve(data.choices[0].message.content);
     })
-    .catch(err => reject(err));
+    .catch(err => reject(err)); //to catch API/network errors
    });
     
 };
